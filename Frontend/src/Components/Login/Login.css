@@ -1,0 +1,191 @@
+.auth-page {
+  background: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.auth-nav .logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #0d9488;
+}
+
+.nav-actions .signup-btn {
+  background: #f97316;
+  color: white;
+  padding: 0.6rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.step {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d1d5db;
+}
+.step.active { background: #0d9488; }
+
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.icon-input .input-icon {
+  position: absolute;
+  top: 40%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 1.2rem;
+}
+.icon-input input {
+  width: 100%;
+  padding: 0.8rem 0.8rem 0.8rem 2.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+.icon-input input:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13,148,136,0.15);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 12px;
+  background: #0d9488;
+  color: white;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+.auth-btn:hover { background: #0f766e; }
+
+.back-btn {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.6rem;
+  border-radius: 12px;
+  border: 1px solid #6b7280;
+  background: transparent;
+  color: #6b7280;
+}
+.back-btn:hover { color: #0d9488; border-color: #0d9488; }
+
+.auth-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+.auth-links a { color: #f97316; font-weight: 500; }
+
+/* Responsive */
+@media(max-width:480px){
+  .auth-card { padding: 2rem 1.5rem; border-radius: 16px; }
+  .auth-card h2 { font-size: 1.5rem; }
+}
+/* Auth Container adjustments for small screens */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1.5rem 1rem;
+  }
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Push auth card slightly up on very small devices */
+@media (max-width: 480px) {
+  .auth-container {
+    align-items: flex-start; /* aligns card toward top */
+    padding-top: 2rem; /* extra spacing from top */
+  }
+  .auth-card {
+    margin-top: 4.5rem; /* optional extra spacing */
+    padding: 1.8rem 1.2rem;
+    border-radius: 16px;
+  }
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+  .helper-text {
+    font-size: 0.85rem;
+  }
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+/* Add to Login.css if the dropdown needs styling */
+.role-select {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* Adjust padding to align with icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1rem;
+  appearance: none; /* Removes default dropdown arrow */
+  position: relative;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: .65em auto;
+  cursor: pointer;
+}
+
+/* Ensure icon stays aligned */
+.input-group.icon-input .role-select {
+  padding-left: 45px; /* Make space for the icon */
+}

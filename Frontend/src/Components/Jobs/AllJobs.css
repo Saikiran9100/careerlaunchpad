@@ -1,0 +1,145 @@
+.all-jobs-wrapper {
+  width: 90%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.all-jobs-wrapper .page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.all-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+
+
+/* Wrapper */
+.all-jobs-wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+}
+
+/* Header & Title */
+.jobs-header-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Filter Container (Flexbox) --- */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Search Box & Inputs */
+.search-box, .skill-box {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.job-search-input {
+    width: 100%;
+    padding: 12px 20px;
+    padding-right: 40px; /* Space for icon */
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.job-search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.search-icon-j {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: #888;
+    pointer-events: none;
+}
+
+/* Grid Layout */
+.all-jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Utilities */
+.back-btn-page {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-btn-page:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+}
+
+.clear-filter-btn {
+    margin-top: 10px;
+    background: none;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-filter-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .filter-container {
+        flex-direction: column;
+    }
+}

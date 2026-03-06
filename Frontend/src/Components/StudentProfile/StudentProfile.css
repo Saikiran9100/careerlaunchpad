@@ -1,0 +1,389 @@
+/* Container */
+.profile-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f4f7f6;
+    min-height: 100vh;
+}
+
+/* --- HEADER SECTION --- */
+.profile-header {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.profile-left {
+    flex-shrink: 0;
+}
+
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-upload-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #007bff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: 3px solid #fff;
+    transition: background 0.2s;
+}
+
+.image-upload-overlay:hover {
+    background: #0056b3;
+}
+
+.profile-right {
+    flex-grow: 1;
+}
+
+.basic-info h1 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+    color: #222;
+}
+
+.basic-info .bio {
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    max-width: 800px;
+}
+
+.student-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.student-badges .skill {
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Edit Mode Inputs */
+.edit-basic-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.edit-basic-info input,
+.edit-basic-info textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* --- MAIN CONTENT LAYOUT --- */
+.main-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 25px;
+}
+
+/* Sidebar Column */
+.profile-details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Main Content Column */
+.profile-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* --- SECTION CARDS --- */
+.section-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.section-card h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+}
+
+/* Info Grid (Personal Details) */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item label {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item p {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+    font-size: 1rem;
+}
+
+.info-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-item input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-list .skill {
+    background: #f1f3f5;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* Card Items (Education/Projects) */
+.card-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.card-item:last-child {
+    border-bottom: none;
+}
+
+.view-mode-item h5 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.view-mode-item .subtitle {
+    margin: 0 0 8px 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.view-mode-item p {
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+    color: #444;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #555;
+    background: #fafafa;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.view-mode-item a {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Edit Mode Inputs within Cards */
+.edit-mode-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.edit-mode-item .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffcccc;
+    color: #cc0000;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.add-btn {
+    margin-top: 15px;
+    background: none;
+    border: 2px dashed #007bff;
+    color: #007bff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.add-btn:hover {
+    background: #e3f2fd;
+}
+
+/* --- REVIEWS SECTION --- */
+.review {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.review-rating {
+    color: #ffc107;
+    font-size: 1.1rem;
+}
+
+.review-feedback {
+    font-style: italic;
+    color: #555;
+    margin: 0;
+}
+
+/* --- ACTION BUTTONS --- */
+.profile-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.action-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.action-btn.primary {
+    background: #007bff;
+    color: white;
+}
+
+.action-btn.secondary {
+    background: #e2e6ea;
+    color: #495057;
+}
+
+/* Loading & Error States */
+.loading, .error {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.error {
+    color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-actions {
+        justify-content: center;
+    }
+}

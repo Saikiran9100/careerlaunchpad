@@ -1,0 +1,288 @@
+.navbar {
+  background-color: var(--surface);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.navbar-logo svg path {
+  stroke: var(--primary);
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem; 
+  font-weight: 700;
+  color: var(--text-dark); 
+}
+
+.clp-logo-img {
+  height: 40px; 
+  width: auto;
+  margin-right: 0.5rem; 
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .clp-logo-img {
+  transform: scale(1.05); 
+}
+.desktop-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link-button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2000; 
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  margin: 4px auto;
+  background-color: var(--text-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+.mobile-nav-links {
+  display: none;
+}
+
+@media (max-width: 668px) {
+  .desktop-nav-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(249, 250, 251, 0.98); 
+    backdrop-filter: blur(6px);
+
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  .mobile-nav-links.open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-links .nav-link {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+  }
+
+  .mobile-nav-links .nav-link-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent);
+  }
+
+  .mobile-nav-links .nav-link-button:hover {
+    background-color: var(--primary);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    font-size: 1.2rem;
+  }
+
+  .navbar-logo svg {
+    min-width: 24px;
+    min-height: 24px;
+  }
+
+  .mobile-nav-links .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .mobile-nav-links .nav-link-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+.nav-icon {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+} 
+/* --- Profile Dropdown Styles --- */
+
+/* Container for the icon and dropdown */
+.profile-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the icon button */
+.nav-icon {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #333; /* Or your nav link color */
+  cursor: pointer;
+  padding: 0 5px;
+}
+.nav-icon:hover {
+  color: var(--primary); /* Or your hover color */
+}
+
+/* The dropdown menu itself */
+.profile-dropdown {
+  position: absolute;
+  top: 100%; /* Position below the icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 240px;
+  z-index: 100;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section of the dropdown */
+.dropdown-user-info {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-user-info strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.dropdown-user-info span {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.dropdown-user-info .role-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary); /* Or your theme color */
+  background-color: #e6f7eb; /* Light green */
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-top: 8px;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+/* Links and buttons in the dropdown */
+.dropdown-link,
+.dropdown-link-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-link:hover,
+.dropdown-link-button:hover {
+  background-color: #f9f9f9;
+}
+
+/* Specific style for the signout button */
+.dropdown-link-button {
+  color: #d9534f; /* A red color for signout */
+  font-weight: 500;
+}

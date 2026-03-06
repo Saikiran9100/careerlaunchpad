@@ -1,0 +1,107 @@
+.home-page {
+  text-align: center;
+  padding: 3rem 1rem; /* Adjusted padding */
+  font-family: var(--font-family);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home-page h1 {
+  font-size: 2.2rem; /* Adjusted font size */
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.home-page p {
+  font-size: 1rem; /* Adjusted font size */
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
+}
+
+.dashboard-summary-home { /* Renamed to avoid conflict */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem; /* Adjusted gap */
+    margin-top: 2rem; /* Adjusted margin */
+    margin-bottom: 2rem;
+}
+
+.summary-card-home { /* Renamed to avoid conflict */
+    background-color: var(--background-light);
+    padding: 1.5rem; /* Adjusted padding */
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Lighter shadow */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card-home:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.summary-card-home h3 {
+    font-size: 1.1rem; /* Adjusted font size */
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.summary-card-home p {
+    font-size: 1.3rem; /* Adjusted font size */
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.home-page .cta-button { /* Reused button style */
+    padding: 0.8rem 1.6rem; /* Adjusted padding */
+    font-size: 1rem; /* Adjusted font size */
+    border-radius: var(--border-radius-md);
+    background-color: var(--secondary-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.home-page .cta-button:hover {
+    background-color: #2563eb;
+}
+
+/* Media Queries for HomePage */
+@media (max-width: 768px) {
+    .home-page h1 {
+        font-size: 1.8rem;
+    }
+    .home-page p {
+        font-size: 0.9rem;
+    }
+    .dashboard-summary-home {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+    .summary-card-home {
+        padding: 1.2rem;
+    }
+    .summary-card-home h3 {
+        font-size: 1rem;
+    }
+    .summary-card-home p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-page {
+        padding: 2rem 0.8rem;
+    }
+    .home-page h1 {
+        font-size: 1.5rem;
+    }
+    .home-page p {
+        font-size: 0.85rem;
+    }
+    .home-page .cta-button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.4rem;
+    }
+}

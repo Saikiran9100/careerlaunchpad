@@ -1,0 +1,152 @@
+/* Container for the whole page */
+.add-experience-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.add-experience-form h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.add-experience-form p {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Back button */
+.back-btn-form {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+.back-btn-form:hover {
+  text-decoration: underline;
+}
+
+/* Form layout */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+.form-row .form-group {
+  flex: 1; /* Make fields in a row share space */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Important for padding to work */
+  font-family: inherit; /* Make sure it uses the same font */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Radio button styling */
+.radio-group label {
+  margin-bottom: 0.5rem;
+}
+.radio-options {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0.75rem 0; /* Align with input height */
+}
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+.radio-options input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+/* Submit button */
+.submit-experience-btn {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #28a745; /* Green */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+.submit-experience-btn:hover {
+  background-color: #218838; /* Darker green */
+}
+.submit-experience-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Feedback Messages */
+.error-message,
+.success-message {
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+.error-message {
+  color: #d9534f;
+  background-color: #f2dede;
+}
+.success-message {
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .add-experience-container {
+    padding: 1.5rem;
+  }
+}

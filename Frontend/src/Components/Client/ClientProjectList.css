@@ -1,0 +1,209 @@
+.client-project-list-container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.client-project-list-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: left; /* Align to left by default */
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.list-header h2 {
+    margin: 0; /* Override h2 default margin */
+}
+
+.see-more-link {
+  color: #1a73e8; /* Primary blue */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.see-more-link:hover {
+  color: #1764cc; /* Darker blue */
+  text-decoration: underline;
+}
+
+.client-project-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards if not full row */
+  gap: 1.5rem; /* Space between cards */
+  margin: 0 -1rem; /* Negative margin to offset card margins */
+}
+
+.client-project-list-container p {
+    text-align: center;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.client-project-list-container p.error-message {
+    color: #d9534f;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+
+/* ClientProjectList.css */
+
+.client-project-list-container {
+  max-width: 1200px; /* Or your preferred max width */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* ... (Styles for h2, .list-header, .see-more-link remain the same) ... */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.list-header h2 {
+    margin: 0;
+    font-size: 1.8rem; /* Consistent header size */
+}
+.see-more-link { /* Ensure link styles are present */
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.see-more-link:hover {
+  color: #1764cc;
+  text-decoration: underline;
+}
+
+
+/* --- Styles for Flexbox Row (No Scroll) --- */
+.client-project-cards-grid {
+  display: flex;        /* 1. Use flexbox */
+  flex-wrap: wrap;      /* 2. Allow wrapping (though we aim for 1 row on wide screens) */
+  justify-content: space-between; /* 3. Distribute space between cards */
+  gap: 1.5rem;          /* 4. Consistent space between cards */
+  padding: 1rem 0;      /* Add some vertical padding */
+  /* REMOVED: overflow-x: auto; */
+  /* REMOVED: flex-wrap: nowrap; */
+  /* REMOVED: scrollbar styling */
+}
+
+/* --- Adjustments for Cards within this grid --- */
+.client-project-cards-grid > .client-project-card {
+   margin: 0;             /* Remove individual card margins if using gap */
+   flex-shrink: 1;        /* Allow shrinking if needed on smaller screens */
+   /* 5. Calculate width for 4 cards with gap */
+   flex-basis: calc(25% - (1.5rem * 3 / 4)); /* Distribute gap space */
+   min-width: 220px;      /* Prevent cards from becoming too narrow before wrapping */
+   box-sizing: border-box;
+   /* Use the 'simple' card styles defined in ClientProjectCard.css for reduced height */
+}
+
+/* Optional: Adjustments for smaller screens if needed */
+@media (max-width: 992px) { /* Example: Tablet */
+    .client-project-cards-grid > .client-project-card {
+        flex-basis: calc(50% - (1.5rem / 2)); /* 2 cards per row */
+    }
+}
+@media (max-width: 576px) { /* Example: Mobile */
+    .client-project-cards-grid > .client-project-card {
+        flex-basis: 100%; /* 1 card per row */
+        min-width: unset;
+    }
+    .client-project-cards-grid {
+        gap: 1rem; /* Reduce gap on mobile */
+        justify-content: center; /* Center single card */
+    }
+}
+
+
+/* ... (Rest of ClientProjectList.css, like error messages) ... */
+
+
+
+
+
+/* Section Wrapper */
+.client-project-list-container {
+    padding: 4rem 0;
+    background-color: #f8f9fa; /* Light grey background to stand out */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header (Title + See All Link) */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.list-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.see-more-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.see-more-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Grid Layout */
+.client-project-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Empty State Link */
+.link-text {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.link-text:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .list-header h2 {
+        font-size: 1.5rem;
+    }
+}

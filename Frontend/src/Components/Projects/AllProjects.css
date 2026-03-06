@@ -1,0 +1,191 @@
+.all-projects-wrapper {
+  width: 90%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.all-projects-wrapper .page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.all-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .all-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .all-projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Wrapper */
+.all-projects-wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+}
+
+/* Header */
+.projects-header-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* --- NEW: Search & Filter Styles --- */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    flex: 2; /* Takes up more space */
+    min-width: 250px;
+}
+
+.project-search-input {
+    width: 100%;
+    padding: 12px 20px;
+    padding-right: 40px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.project-search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+.search-icon-p {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: #888;
+    pointer-events: none;
+}
+
+/* Skill Dropdown */
+.skill-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.skill-select {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none; /* Removes default browser arrow */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    background-size: 0.65em auto;
+}
+
+.skill-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+/* Grid & Utilities */
+.all-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.back-btn-page {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.back-btn-page:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #d9534f;
+    background-color: #f2dede;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+}
+
+.clear-filter-btn {
+    margin-top: 10px;
+    background: none;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-filter-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .filter-container {
+        flex-direction: column;
+    }
+    .search-box, .skill-box {
+        width: 100%;
+    }
+}

@@ -1,0 +1,104 @@
+.project-detail-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-family: sans-serif;
+  color: #333;
+}
+
+.back-btn-project {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-btn-project:hover {
+  background-color: #e0e0e0;
+}
+
+.project-detail-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.client-info {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta-info {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-meta-info span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #006421;
+}
+
+.project-detail-section {
+  margin-bottom: 2rem;
+}
+
+.project-detail-section h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.project-detail-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.project-detail-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag-detail {
+  background-color: #e6f7ff;
+  color: #0056b3;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.apply-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}

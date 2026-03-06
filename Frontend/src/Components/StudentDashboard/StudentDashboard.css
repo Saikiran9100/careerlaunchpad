@@ -1,0 +1,290 @@
+/* 
+.dashboard-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.dashboard-container h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-container p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.project-section {
+  margin-top: 2.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.project-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.5rem;
+  margin: 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.status-pending-dot { background-color: #f0ad4e; } 
+.status-active-dot { background-color: #5cb85c; } 
+.status-completed-dot { background-color: #555; } 
+.status-rejected-dot { background-color: #d9534f; } 
+
+
+.table-responsive-wrapper {
+  overflow-x: auto;
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.projects-table th,
+.projects-table td {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.projects-table th {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: #fcfcfc;
+}
+
+.projects-table td {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.projects-table tr:last-child td {
+  border-bottom: none;
+}
+
+.projects-table td[data-label="Title"] {
+  font-weight: 600;
+  white-space: normal;
+}
+
+.status-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.status-open, .status-applied, .status-shortlisted {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+.status-in-progress, .status-hired {
+  background-color: #e6ffed;
+  color: #006421;
+}
+.status-completed {
+  background-color: #f0f0f0;
+  color: #555;
+}
+.status-rejected { 
+  background-color: #f2dede;
+  color: #d9534f;
+}
+.status-unknown { background-color: #f0f0f0; color: #555; }
+
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.details-btn,
+.finish-btn {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.details-btn:hover,
+.finish-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.finish-btn {
+  border-color: #28a745;
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+.finish-btn:hover {
+  background-color: #28a745;
+  color: white;
+}
+.finish-btn:disabled {
+  background-color: #f0f0f0;
+  color: #999;
+  border-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.no-projects-message {
+  padding: 2rem;
+  text-align: center;
+  color: #777;
+}
+
+.error-message {
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+} */
+
+
+
+
+/* Add to StudentDashboard.css */
+
+.submit-work-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 0.9rem;
+}
+
+.submit-work-btn:hover {
+  background-color: #218838;
+}
+
+.submitted-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: not-allowed;
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+/* --- Modal Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.submission-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.submission-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.submission-form input,
+.submission-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+}

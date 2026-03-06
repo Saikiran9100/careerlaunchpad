@@ -1,0 +1,164 @@
+/* --- CONTAINER & HEADER STYLES --- */
+.all-experiences-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all-experiences-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+}
+
+.all-experiences-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.all-experiences-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* --- ACTION ROW (Search + Button Side-by-Side) --- */
+.experience-actions-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allows wrapping on very small mobile screens */
+}
+
+/* --- SEARCH BAR STYLES --- */
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  max-width: 450px; /* Controls the width of the search bar */
+  margin: 0; /* Margin handled by the flex container now */
+}
+
+.experience-search-input {
+  width: 100%;
+  padding: 12px 20px;
+  padding-right: 45px; /* Space for the icon */
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.experience-search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* --- BUTTON STYLES --- */
+.add-experience-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Matches input height better */
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px; /* Matches search bar radius */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  white-space: nowrap; /* Prevents text breaking */
+}
+
+.add-experience-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.add-experience-btn:active {
+  transform: translateY(0);
+}
+
+/* --- GRID & CARD LAYOUT --- */
+.experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- UTILITY STYLES --- */
+.back-btn-page {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.back-btn-page:hover {
+  text-decoration: underline;
+}
+
+.all-experiences-container > p {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.no-results-msg {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 600px) {
+  .experience-actions-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-bar-container {
+    max-width: 100%;
+  }
+
+  .add-experience-btn {
+    width: 100%;
+  }
+}

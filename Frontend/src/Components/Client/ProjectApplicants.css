@@ -1,0 +1,29 @@
+.applicants-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+.back-btn {
+  background: none; border: none; color: #007bff; font-size: 1rem;
+  cursor: pointer; margin-bottom: 1.5rem; display: inline-flex;
+  align-items: center; gap: 0.5rem; font-weight: 500;
+}
+.back-btn:hover { text-decoration: underline; }
+.page-title {
+  font-size: 2rem; font-weight: 700; color: #333;
+  margin-bottom: 1.5rem; border-bottom: 2px solid #eee; padding-bottom: 1rem;
+}
+.applicants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.applicants-container .error-message {
+  color: #d9534f; background-color: #f2dede;
+  padding: 1rem; border-radius: 4px;
+}
+.applicants-container p {
+  font-size: 1.1rem; color: #666; text-align: center; padding: 2rem 0;
+}

@@ -1,0 +1,30 @@
+2025-10-09T13:41:10.747Z INFO SharedStateManager initialized
+2025-10-09T13:41:10.748Z INFO Is remote: false
+2025-10-09T13:41:10.749Z INFO Starting Local. Installation path: undefined
+2025-10-09T13:41:10.750Z INFO [MainProvider] Creating new MainProvider instance...
+2025-10-09T13:41:10.751Z INFO Installation path exists: c:\Users\anilv\OneDrive\Desktop\CareerLaunchPad\Frontend
+2025-10-09T13:41:10.752Z INFO Initializing database with URL: file:C:\Users\anilv\AppData\Local\Temp\pythagora-temp\pythagora.db
+2025-10-09T13:41:10.756Z INFO [c:\Users\anilv\.vscode\extensions\pythagoratechnologies.pythagora-vs-code-2.5.15] Project root:
+2025-10-09T13:41:10.757Z INFO [c:\Users\anilv\.vscode\extensions\pythagoratechnologies.pythagora-vs-code-2.5.15\prisma\schema.prisma] Schema path:
+2025-10-09T13:41:10.757Z INFO [file:C:\Users\anilv\AppData\Local\Temp\pythagora-temp\pythagora.db] Database URL:
+2025-10-09T13:41:10.758Z INFO [true] Schema exists:
+2025-10-09T13:41:10.759Z INFO Running prisma generate first...
+2025-10-09T13:41:18.696Z INFO [Prisma schema loaded from prisma\schema.prisma
+
+✔ Generated Prisma Client (6.17.0) to .\src\generated\prisma in 373ms
+
+] Prisma generate result:
+2025-10-09T13:41:18.698Z INFO Running prisma db push to sync schema...
+2025-10-09T13:41:22.284Z INFO [Prisma schema loaded from prisma\schema.prisma
+Datasource "db": SQLite database "pythagora.db" at "file:C:\Users\anilv\AppData\Local\Temp\pythagora-temp\pythagora.db"
+
+The database is already in sync with the Prisma schema.
+
+Running generate... (Use --skip-generate to skip the generators)
+[2K[1A[2K[GRunning generate... - Prisma Client
+[2K[1A[2K[G✔ Generated Prisma Client (6.17.0) to .\src\generated\prisma in 490ms
+
+] Prisma db push result:
+2025-10-09T13:41:22.285Z INFO Database initialized successfully
+2025-10-09T13:41:22.286Z INFO [Migration] Checking for database migration...
+2025-10-09T13:41:23.170Z INFO [Migration] No migration needed

@@ -1,68 +1,257 @@
-/* Import a clean, modern font like Inter or Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-/* slick carousel default styles */
+/* Import modern, clean fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Slick carousel default styles */
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
 :root {
-  /* Colors */
-  --primary-blue: #007bff;
-  --primary-blue-dark: #0056b3;
-  --secondary-blue: #3b82f6; /* Lighter blue for buttons */
-  --text-dark: #1f2937;
-  --text-medium: #4b5563;
-  --text-light: #f9fafb;
-  --background-light: #ffffff;
-  --background-grey: #f3f4f6;
-  --border-color: #d1d5db;
-  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
-  -primary: #0d9488;       /* Teal */
+  /* Primary Colors - Professional Teal */
+  --primary: #0d9488;
   --primary-dark: #0f766e;
-  --accent: #f97316;        /* Coral/Orange */
-  --background: #f9fafb;    /* Light gray */
-  --surface: #ffffff;       /* Cards / Sections */
-  --text-dark: #111827;     /* Main text */
-  --text-light: #6b7280;    /* Secondary text */
-  --radius: 12px;
-  --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-
-
-  /* Responsive Font Sizes (Base will change) */
-  font-size: 16px; /* Default for desktop */
+  --primary-light: #14b8a6;
+  
+  /* Accent Color - Warm Orange for CTAs */
+  --accent: #f97316;
+  --accent-dark: #ea580c;
+  
+  /* Neutral Colors */
+  --background: #fafbfc;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+  
+  /* Text Colors */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-inverse: #ffffff;
+  
+  /* Status Colors */
+  --success: #10b981;
+  --success-light: #d1fae5;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
+  --error: #ef4444;
+  --error-light: #fee2e2;
+  --info: #3b82f6;
+  --info-light: #dbeafe;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition: 200ms ease;
+  --transition-slow: 300ms ease;
+  
+  /* Container max-widths */
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+  --max-width-2xl: 1400px;
 }
 
 /* Basic Reset */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--font-family);
-  background-color: var(--background-light);
-  color: var(--text-dark);
+  font-size: var(--font-size-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-primary);
+  background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p {
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: color var(--transition);
 }
 
-/* Responsive Font Scaling for smaller devices */
-@media (max-width: 768px) {
+a:hover {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: var(--max-width-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section {
+  padding: var(--space-16) 0;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Focus States for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary);
+  color: var(--text-inverse);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--border-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Responsive Font Scaling */
+@media (max-width: 1024px) {
   :root {
-    font-size: 15px; /* Slightly smaller base font for tablets */
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.5rem;
+    --font-size-2xl: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  :root {
+    --font-size-4xl: 1.75rem;
+    --font-size-3xl: 1.375rem;
+    --space-16: 3rem;
+    --space-12: 2.5rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-4);
   }
 }
 
 @media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
   :root {
-    font-size: 14px; /* Even smaller base font for mobile */
+    --font-size-4xl: 1.5rem;
+    --font-size-3xl: 1.25rem;
+    --space-16: 2.5rem;
+    --space-12: 2rem;
   }
 }

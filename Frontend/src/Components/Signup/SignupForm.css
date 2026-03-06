@@ -1,50 +1,56 @@
-signup-page-wrapper { /* Removed -freelancer */
+/* Signup Page Styles - Clean & Professional */
+
+.signup-page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f7f6;
-  padding: 2rem;
-  box-sizing: border-box;
+  background-color: var(--background);
+  padding: var(--space-8);
 }
 
-.signup-card { /* Removed -freelancer */
-  background-color: #fff;
-  padding: 2.5rem 3rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+.signup-card {
+  background-color: var(--surface);
+  padding: var(--space-10) var(--space-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
   width: 100%;
   max-width: 450px;
   text-align: center;
 }
 
-.signup-card h2 { /* Removed -freelancer */
-  color: #1a7f72;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.signup-card h2 {
+  color: var(--primary-dark);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
 }
 
 .step-indicators {
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
 }
 
 .step-indicators .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  background-color: #d3d3d3;
-  margin: 0 5px;
+  border-radius: var(--radius-full);
+  background-color: var(--border);
+  transition: background-color var(--transition);
 }
 
 .step-indicators .dot.active {
-  background-color: #1a7f72;
+  background-color: var(--primary);
 }
 
-.signup-form { /* Removed -freelancer */
+.signup-form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--space-4);
 }
 
 .input-group {
@@ -53,100 +59,140 @@ signup-page-wrapper { /* Removed -freelancer */
 
 .input-icon {
   position: absolute;
-  left: 15px;
+  left: var(--space-4);
   top: 50%;
   transform: translateY(-50%);
-  color: #888;
-  font-size: 1.1rem;
-  z-index: 1; /* Ensure icon is above select */
+  color: var(--text-muted);
+  font-size: var(--font-size-lg);
+  z-index: 1;
 }
 
 .input-group input,
-.input-group select { /* Added select */
+.input-group select {
   width: 100%;
-  padding: 1rem 1rem 1rem 3rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: border-color 0.2s ease;
-  appearance: none; /* Remove default select styling */
-  background-color: white; /* Ensure background is white */
-}
-
-/* Specific styling for the role dropdown */
-.input-group select.role-select {
-    padding-right: 2.5rem; /* Make space for dropdown arrow */
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 0.65em auto;
-    cursor: pointer;
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-12);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background-color: var(--surface);
+  transition: all var(--transition);
 }
 
 .input-group input:focus,
-.input-group select:focus { /* Added select */
+.input-group select:focus {
   outline: none;
-  border-color: #1a7f72;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
 }
 
-.submit-btn { /* Removed -freelancer */
-  background-color: #1a7f72;
-  color: white;
-  border: none;
-  padding: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 8px;
+.input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.input-group select.role-select {
+  appearance: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem;
+  padding-right: var(--space-10);
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  background-size: 12px auto;
 }
 
-.submit-btn:hover { /* Removed -freelancer */
-  background-color: #14665a;
-}
-
-.login-link { /* Removed -freelancer */
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.login-link a { /* Removed -freelancer */
-  color: #1a7f72;
+.submit-btn {
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  border: none;
+  padding: var(--space-4);
+  font-size: var(--font-size-base);
   font-weight: 600;
-  text-decoration: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: var(--space-2);
 }
 
-.login-link a:hover { /* Removed -freelancer */
-  text-decoration: underline;
+.submit-btn:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-link {
+  margin-top: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.login-link a {
+  color: var(--accent);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.login-link a:hover {
+  color: var(--accent-dark);
 }
 
 .error-message {
-    color: #dc3545;
-    font-size: 0.9rem;
-    margin-top: -0.5rem;
-    margin-bottom: 0.5rem;
+  color: var(--error);
+  background-color: var(--error-light);
+  border: 1px solid var(--error);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
+  font-size: var(--font-size-sm);
+  text-align: left;
 }
-/* --- Add this to the end of SignupForm.css --- */
 
 .success-message {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .success-message h2 {
-  font-size: 1.8rem;
-  color: var(--primary); /* Or your site's main color */
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-2xl);
+  color: var(--primary);
+  margin-bottom: var(--space-2);
 }
 
 .success-message p {
-  font-size: 1rem;
-  color: #333;
-  margin: 0.25rem 0;
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin: var(--space-1) 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signup-page-wrapper {
+    padding: var(--space-6);
+  }
+  
+  .signup-card {
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-page-wrapper {
+    padding: var(--space-4);
+    align-items: flex-start;
+    padding-top: var(--space-8);
+  }
+  
+  .signup-card {
+    padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-md);
+  }
+  
+  .signup-card h2 {
+    font-size: var(--font-size-xl);
+  }
 }

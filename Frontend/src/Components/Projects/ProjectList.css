@@ -1,53 +1,89 @@
+/* Project List Section Styles */
+
 .project-section-wrapper {
-  width: 95%;
-  max-width: 1500px;
-  margin: 3rem auto 0 auto;
-  font-family: sans-serif;
+  width: 100%;
+  max-width: var(--max-width-2xl);
+  margin: 0 auto;
+  padding: var(--space-12) 5%;
+  background: var(--background);
 }
+
 .project-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 0 0.5rem;
+  margin-bottom: var(--space-8);
+  padding: 0;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
+
 .project-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #222;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
   margin: 0;
 }
+
 .header-buttons {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-4);
 }
+
 .see-more-link {
-  font-size: 1rem;
+  font-size: var(--font-size-sm);
   font-weight: 600;
-  color: #007bff;
+  color: var(--primary);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  transition: color 0.3s ease;
+  padding: var(--space-2) var(--space-3);
+  transition: all var(--transition);
+  border-radius: var(--radius);
 }
+
 .see-more-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  background-color: var(--border-light);
+  color: var(--primary-dark);
 }
+
 .project-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--space-6);
   grid-template-columns: 1fr;
 }
-@media (min-width: 600px) {
+
+@media (min-width: 640px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1200px) {
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
   .project-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .project-section-wrapper {
+    padding: var(--space-8) var(--space-4);
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  
+  .project-title {
+    font-size: var(--font-size-xl);
   }
 }

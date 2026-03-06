@@ -1,5 +1,16 @@
+/* Features Page Styles - Clean & Professional */
+
 .features-page-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 3rem; /* Adds space between the project and interview sections */
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.features-page-wrapper > section {
+  border-bottom: 1px solid var(--border);
+}
+
+.features-page-wrapper > section:last-of-type {
+  border-bottom: none;
 }

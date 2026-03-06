@@ -1,161 +1,116 @@
+/* Job List Section Styles */
+
 .job-section-wrapper {
-  width: 95%;
-  max-width: 1500px;
-  margin: 3rem auto;
-  font-family: sans-serif;
+  width: 100%;
+  max-width: var(--max-width-2xl);
+  margin: 0 auto;
+  padding: var(--space-12) 5%;
+  background: var(--surface);
 }
 
 .job-header {
   display: flex;
-  justify-content: space-between; /* Keeps title left, buttons right */
-  align-items: center; /* Vertically aligns title and buttons */
-  margin-bottom: 1.5rem;
-  padding: 0 0.5rem;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
-  gap: 1rem; /* Add gap for wrapping */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
 .job-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #222;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
   margin: 0;
-  flex-shrink: 0; /* Prevent title from shrinking too much */
 }
 
-/* New: Wrapper for buttons in the header */
 .header-buttons {
-    display: flex;
-    align-items: center;
-    gap: 1rem; /* Space between the two buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap */
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
 }
 
-/* New: Styles for the search button specifically in the header */
 .search-openings-btn-header {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem; /* Adjusted padding */
-    font-size: 0.9rem; /* Adjusted font size */
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    white-space: nowrap; /* Prevent button text wrapping */
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  border: none;
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
 }
 
 .search-openings-btn-header:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
 }
 
 .view-all-link {
-  font-size: 1rem;
+  font-size: var(--font-size-sm);
   font-weight: 600;
-  color: #007bff;
+  color: var(--text-muted);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  transition: color 0.3s ease;
-  white-space: nowrap; /* Prevent link text wrapping */
+  padding: var(--space-2) var(--space-3);
+  transition: all var(--transition);
+  border-radius: var(--radius);
+  white-space: nowrap;
 }
 
 .view-all-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: var(--primary);
+  background-color: var(--border-light);
 }
 
 .job-grid {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-bottom: 2.5rem; /* Re-added margin-bottom removed by previous button */
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
 }
 
-
-
-/* Main Wrapper for Landing Page Section */
-.job-section-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 20px;
+@media (min-width: 640px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* Header Section */
-.job-header {
-    display: flex;
+@media (min-width: 1024px) {
+  .job-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .job-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .job-section-wrapper {
+    padding: var(--space-8) var(--space-4);
+  }
+  
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  
+  .job-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .header-buttons {
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1rem;
-}
-
-.job-title {
-    font-size: 2rem;
-    color: #333;
-    font-weight: 700;
-}
-
-/* Header Buttons Group */
-.header-buttons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-/* "Search Current Openings" Button */
-.search-openings-btn-header {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.search-openings-btn-header:hover {
-    background-color: #0056b3;
-}
-
-/* "View All" Link */
-.view-all-link {
-    background: none;
-    border: none;
-    color: #666;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.view-all-link:hover {
-    color: #007bff;
-    text-decoration: underline;
-}
-
-/* Grid Layout for Cards */
-.job-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 25px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .job-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .header-buttons {
-        width: 100%;
-        justify-content: space-between;
-    }
+  }
 }
